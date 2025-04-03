@@ -155,7 +155,7 @@ export default {
 				'expand': 'expand 0.8s ease-in-out',
 			},
 			backgroundImage: {
-				'hero-pattern': 'linear-gradient(to bottom right, rgba(49, 46, 129, 0.7), rgba(79, 70, 229, 0.7))',
+				'hero-pattern': 'linear-gradient(to bottom right, rgba(180, 30, 30, 0.7), rgba(0, 0, 0, 0.8))',
 				'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
 				'gradient-conic': 'conic-gradient(from 225deg, var(--tw-gradient-stops))'
 			},

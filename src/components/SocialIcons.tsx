@@ -34,7 +34,7 @@ const SocialIcons: React.FC<SocialIconsProps> = ({
       name: 'Email', 
       icon: Mail, 
       url: 'mailto:your.email@example.com',
-      color: 'hover:text-pink-400' 
+      color: 'hover:text-primary' 
     },
   ];
 
