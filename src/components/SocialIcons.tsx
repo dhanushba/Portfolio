@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { GitHub, Linkedin, Twitter, Mail, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, ExternalLink } from 'lucide-react';
 
 interface SocialIconsProps {
   iconSize?: number;
@@ -13,8 +13,8 @@ const SocialIcons: React.FC<SocialIconsProps> = ({
 }) => {
   const socialLinks = [
     { 
-      name: 'GitHub', 
-      icon: GitHub, 
+      name: 'Github', 
+      icon: Github, 
       url: 'https://github.com/yourusername',
       color: 'hover:text-white' 
     },
