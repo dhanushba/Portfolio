@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
 
-    --card: 0 0% 11%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 0%;
 
-    --popover: 0 0% 11%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 357 92% 47%;
-    --primary-foreground: 0 0% 95%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 357 92% 47%;
-    --accent-foreground: 0 0% 95%;
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 95%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 357 92% 47%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 0%;
 
     --radius: 0.5rem;
   }
@@ -71,11 +71,11 @@
 
 @layer components {
   .glass-card {
-    @apply bg-black/40 backdrop-blur-sm border border-white/5 shadow-lg;
+    @apply bg-white/80 backdrop-blur-sm border border-black/5 shadow-md;
   }
   
   .hover-glow {
-    @apply transition-all duration-300 hover:shadow-[0_0_15px_rgba(229,9,20,0.5)] hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1;
   }
   
   .section-heading {
@@ -83,15 +83,15 @@
   }
   
   .section-heading::after {
-    @apply content-[''] absolute left-0 bottom-0 w-1/2 h-1 bg-accent rounded-full;
+    @apply content-[''] absolute left-0 bottom-0 w-1/2 h-1 bg-black rounded-full;
   }
 
   .tech-pill {
-    @apply px-3 py-1 rounded-full text-xs font-medium bg-muted text-foreground transition-all duration-300 hover:bg-accent hover:text-accent-foreground;
+    @apply px-3 py-1 rounded-full text-xs font-medium bg-black text-white transition-all duration-300 hover:bg-black/80;
   }
 
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70;
+    @apply text-black;
   }
 }
 
@@ -102,19 +102,19 @@
   pointer-events: none;
   transition: width 0.3s, height 0.3s, background 0.3s;
   z-index: 9999;
-  mix-blend-mode: screen;
+  mix-blend-mode: difference;
 }
 
 .cursor-dot.small {
   width: 8px;
   height: 8px;
-  background: rgba(229, 9, 20, 0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .cursor-dot.large {
   width: 40px;
   height: 40px;
-  background: rgba(229, 9, 20, 0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .trail {
@@ -122,7 +122,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: rgba(229, 9, 20, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   pointer-events: none;
   z-index: 9998;
 }
