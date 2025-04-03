@@ -18,58 +18,58 @@ const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   
-  const filters = ['All', 'Web', 'AI', 'Cloud', 'Mobile'];
+  const filters = ['All', 'Web', 'Java', 'Mobile', 'AI'];
   
   const projects: Project[] = [
     {
       id: 1,
-      title: 'AI-Powered Task Manager',
-      description: 'A smart task management application that uses AI to prioritize and categorize tasks based on user behavior and deadlines.',
+      title: 'Super Mario College Adventure',
+      description: 'A 2D platformer game in Java focused on a college tour, incorporating game mechanics like coin collection, scoring, and level design using basic mathematics.',
       image: 'https://via.placeholder.com/600x400',
-      tags: ['React', 'Node.js', 'TensorFlow.js', 'MongoDB'],
-      category: ['Web', 'AI'],
-      demoUrl: 'https://demo-url.com',
-      githubUrl: 'https://github.com/yourusername/project'
+      tags: ['Java', 'Basic Mathematics', 'IntelliJ'],
+      category: ['Java'],
+      demoUrl: '#',
+      githubUrl: 'https://github.com/dhanushba/super-mario-college'
     },
     {
       id: 2,
-      title: 'Cloud Infrastructure Dashboard',
-      description: 'A comprehensive dashboard for monitoring and managing cloud resources across multiple providers with real-time alerts and cost optimization.',
+      title: 'Recruitment-rail',
+      description: 'An AI-powered Applicant Tracking System (ATS) using Python, Google Generative AI, and Streamlit for automated resume evaluations and actionable insights.',
       image: 'https://via.placeholder.com/600x400',
-      tags: ['Vue.js', 'AWS', 'Docker', 'GraphQL'],
-      category: ['Web', 'Cloud'],
-      demoUrl: 'https://demo-url.com',
-      githubUrl: 'https://github.com/yourusername/project'
+      tags: ['Python', 'Google Generative AI', 'Streamlit'],
+      category: ['AI', 'Web'],
+      demoUrl: '#',
+      githubUrl: 'https://github.com/dhanushba/recruitment-rail'
     },
     {
       id: 3,
-      title: 'E-Commerce Mobile App',
-      description: 'A feature-rich e-commerce application with AR product visualization, personalized recommendations, and seamless payment integration.',
+      title: 'BuyWiz - E-Commerce Price Tracker',
+      description: 'A price tracking website using Next.js, Bright Data, and MongoDB, enabling users to track products, get notified of price changes, and automate data scraping.',
       image: 'https://via.placeholder.com/600x400',
-      tags: ['React Native', 'Firebase', 'Stripe', 'Redux'],
-      category: ['Mobile'],
-      demoUrl: 'https://demo-url.com',
-      githubUrl: 'https://github.com/yourusername/project'
+      tags: ['Next.js', 'Bright Data', 'MongoDB', 'Nodemailer'],
+      category: ['Web'],
+      demoUrl: '#',
+      githubUrl: 'https://github.com/dhanushba/buywiz'
     },
     {
       id: 4,
-      title: 'NLP Document Analyzer',
-      description: 'An advanced document analysis tool that uses natural language processing to extract insights, summarize content, and identify key entities.',
+      title: 'Object Detection For Visually Impaired',
+      description: 'A real-time object detection app using Android Studio and TensorFlow to assist visually impaired users by providing voice descriptions of nearby objects.',
       image: 'https://via.placeholder.com/600x400',
-      tags: ['Python', 'spaCy', 'FastAPI', 'ElasticSearch'],
-      category: ['AI', 'Web'],
-      demoUrl: 'https://demo-url.com',
-      githubUrl: 'https://github.com/yourusername/project'
+      tags: ['Java', 'Android Studio', 'TensorFlow Model'],
+      category: ['Mobile', 'AI', 'Java'],
+      demoUrl: '#',
+      githubUrl: 'https://github.com/dhanushba/object-detection-app'
     },
     {
       id: 5,
-      title: 'Serverless Microservice Architecture',
-      description: 'A highly scalable microservice architecture using serverless technologies for efficient resource utilization and automatic scaling.',
+      title: 'Portfolio Management System',
+      description: 'A Portfolio Management System that allows users to manage their portfolios securely, developed during internship at Parheeksha Business Plugger.',
       image: 'https://via.placeholder.com/600x400',
-      tags: ['AWS Lambda', 'API Gateway', 'DynamoDB', 'Terraform'],
-      category: ['Cloud'],
-      demoUrl: 'https://demo-url.com',
-      githubUrl: 'https://github.com/yourusername/project'
+      tags: ['PHP', 'SQL', 'HTML/CSS'],
+      category: ['Web'],
+      demoUrl: '#',
+      githubUrl: 'https://github.com/dhanushba/portfolio-management'
     }
   ];
   

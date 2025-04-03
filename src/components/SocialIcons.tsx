@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Github, Linkedin, Twitter, Mail, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
 interface SocialIconsProps {
   iconSize?: number;
@@ -15,26 +15,26 @@ const SocialIcons: React.FC<SocialIconsProps> = ({
     { 
       name: 'Github', 
       icon: Github, 
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/dhanushba',
       color: 'hover:text-white' 
     },
     { 
       name: 'LinkedIn', 
       icon: Linkedin, 
-      url: 'https://linkedin.com/in/yourusername',
+      url: 'https://linkedin.com/in/contactdhanushba',
       color: 'hover:text-blue-400' 
-    },
-    { 
-      name: 'Twitter', 
-      icon: Twitter, 
-      url: 'https://twitter.com/yourusername',
-      color: 'hover:text-sky-400' 
     },
     { 
       name: 'Email', 
       icon: Mail, 
-      url: 'mailto:your.email@example.com',
+      url: 'mailto:dhanushba361@gmail.com',
       color: 'hover:text-primary' 
+    },
+    { 
+      name: 'Phone', 
+      icon: Phone, 
+      url: 'tel:+919902548683',
+      color: 'hover:text-green-400' 
     },
   ];
 

@@ -8,9 +8,9 @@ const Hero = () => {
   const [flipped, setFlipped] = useState(false);
   
   const typingTexts = [
-    "🚀 Full-Stack Innovator", 
-    "💡 AI & Scalable Systems Architect", 
-    "☁️ Cloud Enthusiast"
+    "🚀 Information Science Engineer", 
+    "💡 Full Stack Developer", 
+    "☁️ Java & Cloud Enthusiast"
   ];
 
   return (
@@ -35,7 +35,7 @@ const Hero = () => {
               <div className="w-full h-full rounded-full bg-background/90 p-2 flex items-center justify-center">
                 <img 
                   src="https://via.placeholder.com/400x400" 
-                  alt="Dhanush" 
+                  alt="Dhanush B A" 
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
@@ -46,15 +46,15 @@ const Hero = () => {
           <div className={`absolute inset-0 w-full h-full rounded-full glass-card flex items-center justify-center transition-all duration-500 backface-hidden rotate-y-180 ${flipped ? 'opacity-100' : 'opacity-0'}`}>
             <div className="text-center">
               <span className="text-lg font-medium">Hello, I'm</span>
-              <h3 className="text-xl font-bold gradient-text">Dhanush!</h3>
+              <h3 className="text-xl font-bold gradient-text">Dhanush B A!</h3>
               <span className="text-sm animate-wave inline-block">👋</span>
             </div>
           </div>
         </div>
         
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 font-display">
-          Building <span className="gradient-text">Digital Experiences</span><br /> 
-          That Make a Difference
+          <span className="gradient-text">Dhanush B A</span><br /> 
+          Information Science Engineering Student
         </h1>
         
         <div className="h-8 mb-6">

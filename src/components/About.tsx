@@ -4,52 +4,33 @@ import React from 'react';
 const About = () => {
   const experiences = [
     {
-      title: 'Senior Software Engineer',
-      company: 'Tech Innovations Inc.',
-      period: '2020 - Present',
-      description: 'Led the development of cloud-native applications using microservices architecture. Implemented CI/CD pipelines and mentored junior developers.',
-    },
-    {
-      title: 'Full-Stack Developer',
-      company: 'Digital Solutions Ltd',
-      period: '2018 - 2020',
-      description: 'Developed responsive web applications using React and Node.js. Collaborated with design teams to implement UI/UX improvements.',
-    },
-    {
-      title: 'Software Developer Intern',
-      company: 'StartUp Innovations',
-      period: '2017 - 2018',
-      description: 'Assisted in developing mobile applications. Participated in agile development processes and code reviews.',
-    },
+      title: 'Full Stack Developer Intern',
+      company: 'Parheeksha Business Plugger Private Ltd',
+      period: 'October – November 2023',
+      description: 'Developed a Portfolio Management System that allows users to manage their portfolios securely, using PHP, SQL, and HTML/CSS.',
+    }
   ];
 
   const education = [
     {
-      degree: 'Master of Computer Science',
-      institution: 'University of Technology',
-      period: '2016 - 2018',
-      description: 'Focused on Advanced Algorithms and Artificial Intelligence.'
-    },
-    {
-      degree: 'Bachelor of Engineering in Computer Science',
-      institution: 'Engineering College',
-      period: '2012 - 2016',
-      description: 'Graduated with First Class Honours. Led the college tech club.'
+      degree: 'Bachelor of Engineering - Information Science and Engineering',
+      institution: 'BMS Institute Of Technology and Management',
+      period: 'December 2021 – May 2025',
+      description: 'CGPA - 9.39'
     }
   ];
 
   const skills = [
-    { category: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'] },
-    { category: 'Backend', items: ['Node.js', 'Express', 'Python', 'Java', 'Spring Boot'] },
-    { category: 'Database', items: ['MongoDB', 'PostgreSQL', 'Redis', 'Firebase'] },
-    { category: 'DevOps', items: ['Docker', 'Kubernetes', 'AWS', 'GitHub Actions'] },
-    { category: 'AI/ML', items: ['TensorFlow', 'PyTorch', 'OpenAI API', 'Langchain'] },
+    { category: 'Languages', items: ['C', 'C++', 'Java (Beginner)', 'SQL'] },
+    { category: 'Cloud Tools', items: ['AWS (Basic)', 'GCP (Basics)'] },
+    { category: 'Core Concepts', items: ['Data Structures', 'Algorithms', 'OOP'] },
+    { category: 'Web Development', items: ['PHP', 'HTML/CSS', 'Next.js', 'Python'] },
   ];
 
   const funFacts = [
-    { icon: '👨‍💻', value: '1000+', label: 'Hours of Coding' },
-    { icon: '🚀', value: '5+', label: 'Projects Deployed' },
-    { icon: '🎵', value: '∞', label: 'Passion for Carnatic Music' },
+    { icon: '🎵', value: '88%', label: 'Carnatic Music Junior Exam' },
+    { icon: '🏐', value: 'Runners-up', label: 'Volleyball Captain (U-14)' },
+    { icon: '🎓', value: '9.39', label: 'Current CGPA' },
   ];
 
   return (
@@ -59,16 +40,11 @@ const About = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 mb-20">
           <div className="glass-card rounded-xl p-6 animate-slideUp" style={{ animationDelay: '0.2s' }}>
-            <h3 className="text-2xl font-bold mb-4 gradient-text">My Journey</h3>
+            <h3 className="text-2xl font-bold mb-4 gradient-text">Career Objective</h3>
             <p className="text-foreground/80 leading-relaxed">
-              I'm a passionate Full-Stack Developer and Systems Architect with a deep love for building scalable, 
-              efficient applications. With expertise spanning from frontend design to backend systems and cloud infrastructure,
-              I bring a holistic approach to software development.
-            </p>
-            <p className="text-foreground/80 leading-relaxed mt-4">
-              My journey in tech has been driven by curiosity and the desire to create meaningful digital experiences.
-              I believe in writing clean, maintainable code and constantly expanding my skillset to stay at the 
-              forefront of technological innovation.
+              Motivated and innovative Information Science graduate with a strong foundation in computer science, 
+              proficiency in programming, and a collaborative mindset. Passionate about optimizing user experiences 
+              and delivering impactful technology solutions that contribute to meaningful and sustainable advancements.
             </p>
           </div>
           
@@ -87,8 +63,8 @@ const About = () => {
         </div>
         
         <div className="mt-20">
-          <h3 className="text-2xl font-bold mb-8 gradient-text text-center">Professional Experience</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h3 className="text-2xl font-bold mb-8 gradient-text text-center">Work Experience</h3>
+          <div className="grid grid-cols-1 gap-6">
             {experiences.map((exp, index) => (
               <div 
                 key={index} 
@@ -106,7 +82,7 @@ const About = () => {
         
         <div className="mt-20">
           <h3 className="text-2xl font-bold mb-8 gradient-text text-center">Education</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6">
             {education.map((edu, index) => (
               <div 
                 key={index} 
@@ -125,7 +101,7 @@ const About = () => {
         <div className="mt-20">
           <h3 className="text-2xl font-bold mb-8 gradient-text text-center">Technical Skills</h3>
           <div className="glass-card rounded-xl p-6 animate-slideUp">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {skills.map((skillGroup, index) => (
                 <div key={index} className="mb-6">
                   <h4 className="text-lg font-semibold mb-3 text-primary">{skillGroup.category}</h4>
@@ -139,6 +115,17 @@ const About = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+        
+        <div className="mt-20">
+          <h3 className="text-2xl font-bold mb-8 gradient-text text-center">Certifications</h3>
+          <div className="glass-card rounded-xl p-6 animate-slideUp">
+            <ul className="list-disc pl-5 space-y-2">
+              <li className="text-foreground/80">Java from Beginning to Master - Udemy</li>
+              <li className="text-foreground/80">Programming Using Java - Infosys Springboard</li>
+              <li className="text-foreground/80">Naukri Campus Young Turks - Naukri.com</li>
+            </ul>
           </div>
         </div>
       </div>
