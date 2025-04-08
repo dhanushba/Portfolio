@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Award, BookOpen, Briefcase, GraduationCap, Trophy, Code, CloudLightning, Brain } from 'lucide-react';
 
 const About = () => {
   const experiences = [
@@ -17,48 +16,15 @@ const About = () => {
       degree: 'Bachelor of Engineering - Information Science and Engineering',
       institution: 'BMS Institute Of Technology and Management',
       period: 'December 2021 – May 2025',
-      description: 'CGPA - 9.39',
-      logo: 'https://upload.wikimedia.org/wikipedia/en/5/59/BMSIT%26M_Logo.png'
+      description: 'CGPA - 9.39'
     }
   ];
 
-  const skillCategories = [
-    { 
-      name: 'Languages', 
-      icon: <Code className="text-red-500" size={24} />,
-      skills: ['C', 'C++', 'Java', 'SQL'] 
-    },
-    { 
-      name: 'Cloud Tools', 
-      icon: <CloudLightning className="text-red-500" size={24} />,
-      skills: ['AWS (Basic)', 'GCP (Basics)'] 
-    },
-    { 
-      name: 'Core Concepts', 
-      icon: <Brain className="text-red-500" size={24} />,
-      skills: ['Data Structures', 'Algorithms', 'OOP'] 
-    },
-  ];
-
-  const certifications = [
-    { 
-      name: 'Java from Beginning to Master',
-      issuer: 'Udemy',
-      icon: '☕',
-      color: 'bg-red-900/60'
-    },
-    { 
-      name: 'Programming Using Java',
-      issuer: 'Infosys Springboard',
-      icon: '🚀',
-      color: 'bg-red-800/60'
-    },
-    { 
-      name: 'Naukri Campus Young Turks',
-      issuer: 'Naukri.com',
-      icon: '🏆',
-      color: 'bg-red-700/60'
-    }
+  const skills = [
+    { category: 'Languages', items: ['C', 'C++', 'Java (Beginner)', 'SQL'] },
+    { category: 'Cloud Tools', items: ['AWS (Basic)', 'GCP (Basics)'] },
+    { category: 'Core Concepts', items: ['Data Structures', 'Algorithms', 'OOP'] },
+    { category: 'Web Development', items: ['PHP', 'HTML/CSS', 'Next.js', 'Python'] },
   ];
 
   const funFacts = [
@@ -96,118 +62,70 @@ const About = () => {
           </div>
         </div>
         
-        {/* Education & Experience with visuals */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-          <div className="animate-slideUp" style={{ animationDelay: '0.2s' }}>
-            <div className="flex items-center mb-8">
-              <GraduationCap className="text-red-500 mr-3" size={30} />
-              <h3 className="text-2xl font-bold gradient-text">Education Journey</h3>
-            </div>
-            
-            {education.map((edu, index) => (
-              <div 
-                key={index} 
-                className="glass-card rounded-xl p-6 hover-glow mb-6 relative overflow-hidden group"
-              >
-                <div className="absolute right-0 top-0 bottom-0 w-1/4 bg-gradient-to-l from-primary/10 to-transparent opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                
-                <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4">
-                  <img 
-                    src={edu.logo} 
-                    alt={edu.institution} 
-                    className="w-16 h-16 object-contain rounded-md mr-4 mb-3 sm:mb-0"
-                  />
-                  <div>
-                    <h4 className="text-xl font-bold mb-1">{edu.degree}</h4>
-                    <p className="text-primary font-medium">{edu.institution}</p>
-                    <p className="text-sm text-foreground/60 mt-1">{edu.period}</p>
-                  </div>
-                </div>
-                
-                <div className="mt-2 flex items-center">
-                  <Trophy className="text-red-500 mr-2" size={18} />
-                  <p className="text-foreground/90 font-semibold">{edu.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="animate-slideUp" style={{ animationDelay: '0.4s' }}>
-            <div className="flex items-center mb-8">
-              <Briefcase className="text-red-500 mr-3" size={30} />
-              <h3 className="text-2xl font-bold gradient-text">Work Experience</h3>
-            </div>
-            
+        <div className="mt-20">
+          <h3 className="text-2xl font-bold mb-8 gradient-text text-center">Work Experience</h3>
+          <div className="grid grid-cols-1 gap-6">
             {experiences.map((exp, index) => (
               <div 
                 key={index} 
-                className="glass-card rounded-xl p-6 hover-glow relative overflow-hidden group"
+                className="glass-card rounded-xl p-6 hover-glow animate-slideUp"
+                style={{ animationDelay: `${0.2 * index}s` }}
               >
-                <div className="absolute -right-10 -top-10 w-32 h-32 bg-primary/20 rounded-full blur-xl"></div>
                 <h4 className="text-xl font-bold mb-1">{exp.title}</h4>
                 <p className="text-primary font-medium mb-2">{exp.company}</p>
                 <p className="text-sm text-foreground/60 mb-4">{exp.period}</p>
-                <div className="relative">
-                  <p className="text-foreground/80">{exp.description}</p>
-                </div>
+                <p className="text-foreground/80">{exp.description}</p>
               </div>
             ))}
           </div>
         </div>
         
-        {/* Skills as cool interactive cards */}
-        <div className="mb-20">
-          <div className="flex items-center justify-center mb-12">
-            <Code className="text-red-500 mr-3" size={30} />
-            <h3 className="text-2xl font-bold gradient-text text-center">Technical Arsenal</h3>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {skillCategories.map((category, index) => (
+        <div className="mt-20">
+          <h3 className="text-2xl font-bold mb-8 gradient-text text-center">Education</h3>
+          <div className="grid grid-cols-1 gap-6">
+            {education.map((edu, index) => (
               <div 
-                key={index}
-                className="glass-card p-6 rounded-xl hover-glow animate-slideUp"
-                style={{ animationDelay: `${0.2 * (index + 1)}s` }}
+                key={index} 
+                className="glass-card rounded-xl p-6 hover-glow animate-slideUp"
+                style={{ animationDelay: `${0.2 * index}s` }}
               >
-                <div className="flex items-center mb-4">
-                  {category.icon}
-                  <h4 className="ml-3 text-xl font-semibold text-primary">{category.name}</h4>
-                </div>
-                
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <span 
-                      key={skillIndex} 
-                      className="tech-pill transition-transform hover:scale-105 hover:bg-primary/30"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+                <h4 className="text-xl font-bold mb-1">{edu.degree}</h4>
+                <p className="text-primary font-medium mb-2">{edu.institution}</p>
+                <p className="text-sm text-foreground/60 mb-4">{edu.period}</p>
+                <p className="text-foreground/80">{edu.description}</p>
               </div>
             ))}
           </div>
         </div>
         
-        {/* Certifications as achievement cards */}
-        <div className="mb-16">
-          <div className="flex items-center justify-center mb-12">
-            <Award className="text-red-500 mr-3" size={30} />
-            <h3 className="text-2xl font-bold gradient-text text-center">Achievements & Certifications</h3>
+        <div className="mt-20">
+          <h3 className="text-2xl font-bold mb-8 gradient-text text-center">Technical Skills</h3>
+          <div className="glass-card rounded-xl p-6 animate-slideUp">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {skills.map((skillGroup, index) => (
+                <div key={index} className="mb-6">
+                  <h4 className="text-lg font-semibold mb-3 text-primary">{skillGroup.category}</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {skillGroup.items.map((skill, skillIndex) => (
+                      <span key={skillIndex} className="tech-pill">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <div 
-                key={index}
-                className={`rounded-xl p-6 hover-glow animate-slideUp ${cert.color} transition-all`}
-                style={{ animationDelay: `${0.15 * (index + 1)}s` }}
-              >
-                <div className="text-4xl mb-3">{cert.icon}</div>
-                <h4 className="text-lg font-bold text-white mb-2">{cert.name}</h4>
-                <p className="text-white/80 text-sm">Issued by {cert.issuer}</p>
-              </div>
-            ))}
+        </div>
+        
+        <div className="mt-20">
+          <h3 className="text-2xl font-bold mb-8 gradient-text text-center">Certifications</h3>
+          <div className="glass-card rounded-xl p-6 animate-slideUp">
+            <ul className="list-disc pl-5 space-y-2">
+              <li className="text-foreground/80">Java from Beginning to Master - Udemy</li>
+              <li className="text-foreground/80">Programming Using Java - Infosys Springboard</li>
+              <li className="text-foreground/80">Naukri Campus Young Turks - Naukri.com</li>
+            </ul>
           </div>
         </div>
       </div>
