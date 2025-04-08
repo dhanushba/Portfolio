@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				display: ['Montserrat', 'sans-serif'],
+				sans: ['SF Pro Display', '-apple-system', 'BlinkMacSystemFont', 'Inter', 'sans-serif'],
+				display: ['SF Pro Display', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

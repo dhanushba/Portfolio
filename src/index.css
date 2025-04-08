@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 @tailwind base;
 @tailwind components;
@@ -46,6 +46,7 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     overflow-x: hidden;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   html {
@@ -79,7 +80,8 @@
   }
   
   .section-heading {
-    @apply relative text-3xl md:text-4xl font-bold mb-6 inline-block font-display;
+    @apply relative text-3xl md:text-4xl font-bold mb-6 inline-block;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
   }
   
   .section-heading::after {
