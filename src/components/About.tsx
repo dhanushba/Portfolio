@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Award, BookOpen, Briefcase, GraduationCap, Trophy, Code, CloudLightning, Brain } from 'lucide-react';
 
@@ -18,7 +17,7 @@ const About = () => {
       institution: 'BMS Institute Of Technology and Management',
       period: 'December 2021 – May 2025',
       description: 'CGPA - 9.39',
-      logo: 'https://upload.wikimedia.org/wikipedia/en/5/59/BMSIT%26M_Logo.png'
+      logo: '/lovable-uploads/5ebbb37c-0da7-4779-8e9f-cde0c26ad8e1.png'
     }
   ];
 
