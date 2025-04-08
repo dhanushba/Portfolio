@@ -1,5 +1,5 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 @tailwind base;
 @tailwind components;
@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 0%;
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 98%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 357 92% 47%;
+    --primary-foreground: 0 0% 95%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 0 0% 94%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 0 0% 94%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 357 92% 47%;
+    --accent-foreground: 0 0% 95%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 0%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 357 92% 47%;
 
     --radius: 0.5rem;
   }
@@ -46,7 +46,6 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     overflow-x: hidden;
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   html {
@@ -72,28 +71,27 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/80 backdrop-blur-sm border border-black/5 shadow-md;
+    @apply bg-black/40 backdrop-blur-sm border border-white/5 shadow-lg;
   }
   
   .hover-glow {
-    @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-[0_0_15px_rgba(229,9,20,0.5)] hover:-translate-y-1;
   }
   
   .section-heading {
-    @apply relative text-3xl md:text-4xl font-bold mb-6 inline-block;
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    @apply relative text-3xl md:text-4xl font-bold mb-6 inline-block font-display;
   }
   
   .section-heading::after {
-    @apply content-[''] absolute left-0 bottom-0 w-1/2 h-1 bg-black rounded-full;
+    @apply content-[''] absolute left-0 bottom-0 w-1/2 h-1 bg-accent rounded-full;
   }
 
   .tech-pill {
-    @apply px-3 py-1 rounded-full text-xs font-medium bg-black text-white transition-all duration-300 hover:bg-black/80;
+    @apply px-3 py-1 rounded-full text-xs font-medium bg-muted text-foreground transition-all duration-300 hover:bg-accent hover:text-accent-foreground;
   }
 
   .gradient-text {
-    @apply text-black;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70;
   }
 }
 
@@ -104,19 +102,19 @@
   pointer-events: none;
   transition: width 0.3s, height 0.3s, background 0.3s;
   z-index: 9999;
-  mix-blend-mode: difference;
+  mix-blend-mode: screen;
 }
 
 .cursor-dot.small {
   width: 8px;
   height: 8px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(229, 9, 20, 0.8);
 }
 
 .cursor-dot.large {
   width: 40px;
   height: 40px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(229, 9, 20, 0.4);
 }
 
 .trail {
@@ -124,7 +122,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(229, 9, 20, 0.5);
   pointer-events: none;
   z-index: 9998;
 }
