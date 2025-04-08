@@ -9,7 +9,7 @@ const EducationJourney = () => {
       institution: 'BMS Institute Of Technology and Management',
       period: 'December 2021 – May 2025',
       description: 'CGPA - 9.39',
-      logo: '/bmsit-logo.png'  // Updated the path to match the actual file name
+      logo: '/lovable-uploads/5ebbb37c-0da7-4779-8e9f-cde0c26ad8e1.png'  // Updated to use the correct uploaded image path
     }
   ];
 
