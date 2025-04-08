@@ -9,7 +9,7 @@ const EducationJourney = () => {
       institution: 'BMS Institute Of Technology and Management',
       period: 'December 2021 – May 2025',
       description: 'CGPA - 9.39',
-      logo: '/lovable-uploads/5ebbb37c-0da7-4779-8e9f-cde0c26ad8e1.png'
+      logo: '/bmsit-logo.png'  // Updated the path to match the actual file name
     }
   ];
 
@@ -31,7 +31,7 @@ const EducationJourney = () => {
             <img 
               src={edu.logo} 
               alt={edu.institution} 
-              className="w-16 h-16 object-contain rounded-md mr-4 mb-3 sm:mb-0"
+              className="w-16 h-16 object-contain rounded-md mr-4 mb-3 sm:mb-0 bg-white p-1"
             />
             <div>
               <h4 className="text-xl font-bold mb-1">{edu.degree}</h4>
