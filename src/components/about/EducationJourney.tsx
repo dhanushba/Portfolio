@@ -1,8 +1,10 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { GraduationCap, Trophy } from 'lucide-react';
 
 const EducationJourney = () => {
+  const [imageError, setImageError] = useState(false);
+  
   const education = [
     {
       degree: 'Bachelor of Engineering - Information Science and Engineering',
@@ -12,6 +14,9 @@ const EducationJourney = () => {
       logo: '/lovable-uploads/ccec1933-360f-460a-bad3-1accd6f9bc6b.png'
     }
   ];
+
+  // Default placeholder image if the college logo fails to load
+  const placeholderImage = '/placeholder.svg';
 
   return (
     <div className="animate-slideUp" style={{ animationDelay: '0.2s' }}>
@@ -28,14 +33,14 @@ const EducationJourney = () => {
           <div className="absolute right-0 top-0 bottom-0 w-1/4 bg-gradient-to-l from-primary/10 to-transparent opacity-30 group-hover:opacity-50 transition-opacity"></div>
           
           <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4">
-            <div className="w-16 h-16 flex-shrink-0 mr-4 mb-3 sm:mb-0 overflow-hidden rounded-md">
+            <div className="w-16 h-16 flex-shrink-0 mr-4 mb-3 sm:mb-0 overflow-hidden rounded-md bg-white p-1">
               <img 
-                src={edu.logo} 
+                src={imageError ? placeholderImage : edu.logo} 
                 alt={edu.institution}
-                className="w-full h-full object-contain bg-white p-1"
-                onError={(e) => {
-                  console.error('Image failed to load:', edu.logo);
-                  e.currentTarget.src = '/placeholder.svg';
+                className="w-full h-full object-contain"
+                onError={() => {
+                  console.log('Image failed to load, using placeholder instead');
+                  setImageError(true);
                 }}
               />
             </div>
