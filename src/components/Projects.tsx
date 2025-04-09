@@ -29,7 +29,7 @@ const Projects = () => {
       tags: ['Java', 'Basic Mathematics', 'IntelliJ'],
       category: ['Java'],
       demoUrl: '#',
-      githubUrl: 'https://github.com/dhanushba/super-mario-college'
+      githubUrl: 'https://github.com/dhanushba/Super-mario-college-adventure'
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ const Projects = () => {
       image: 'https://via.placeholder.com/600x400',
       tags: ['Python', 'Google Generative AI', 'Streamlit'],
       category: ['AI', 'Web'],
-      demoUrl: '#',
+      demoUrl: 'https://recruitment-rail.streamlit.app/',
       githubUrl: 'https://github.com/dhanushba/recruitment-rail'
     },
     {
@@ -48,8 +48,8 @@ const Projects = () => {
       image: 'https://via.placeholder.com/600x400',
       tags: ['Next.js', 'Bright Data', 'MongoDB', 'Nodemailer'],
       category: ['Web'],
-      demoUrl: '#',
-      githubUrl: 'https://github.com/dhanushba/buywiz'
+      demoUrl: 'https://buywiz.vercel.app/',
+      githubUrl: 'https://github.com/Gurukiran-M/e_commerce-price-tracker'
     },
     {
       id: 4,
@@ -59,7 +59,7 @@ const Projects = () => {
       tags: ['Java', 'Android Studio', 'TensorFlow Model'],
       category: ['Mobile', 'AI', 'Java'],
       demoUrl: '#',
-      githubUrl: 'https://github.com/dhanushba/object-detection-app'
+      githubUrl: 'https://github.com/dhanushba/object-detection-for-visually-impaired-using-tensorflowmodel'
     },
     {
       id: 5,
