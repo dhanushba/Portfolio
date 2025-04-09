@@ -9,7 +9,7 @@ const EducationJourney = () => {
       institution: 'BMS Institute Of Technology and Management',
       period: 'December 2021 – May 2025',
       description: 'CGPA - 9.39',
-      logo: '/lovable-uploads/5ebbb37c-0da7-4779-8e9f-cde0c26ad8e1.png'  // Updated to use the correct uploaded image path
+      logo: '/lovable-uploads/5ebbb37c-0da7-4779-8e9f-cde0c26ad8e1.png'
     }
   ];
 
@@ -28,11 +28,17 @@ const EducationJourney = () => {
           <div className="absolute right-0 top-0 bottom-0 w-1/4 bg-gradient-to-l from-primary/10 to-transparent opacity-30 group-hover:opacity-50 transition-opacity"></div>
           
           <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4">
-            <img 
-              src={edu.logo} 
-              alt={edu.institution} 
-              className="w-16 h-16 object-contain rounded-md mr-4 mb-3 sm:mb-0 bg-white p-1"
-            />
+            <div className="w-16 h-16 flex-shrink-0 mr-4 mb-3 sm:mb-0 overflow-hidden rounded-md">
+              <img 
+                src={edu.logo} 
+                alt={edu.institution}
+                className="w-full h-full object-contain bg-white p-1"
+                onError={(e) => {
+                  console.error('Image failed to load:', edu.logo);
+                  e.currentTarget.src = '/placeholder.svg';
+                }}
+              />
+            </div>
             <div>
               <h4 className="text-xl font-bold mb-1">{edu.degree}</h4>
               <p className="text-primary font-medium">{edu.institution}</p>
