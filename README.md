@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**:(https://portfolio-vert-beta-98.vercel.app/)
+**URL**:https://portfolio-vert-beta-98.vercel.app/
 
 ## How can I edit this code?
 
