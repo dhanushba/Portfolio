@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, FileText } from 'lucide-react';
 
 interface SocialIconsProps {
   iconSize?: number;
@@ -35,6 +34,12 @@ const SocialIcons: React.FC<SocialIconsProps> = ({
       icon: Phone, 
       url: 'tel:+919902548683',
       color: 'hover:text-green-400' 
+    },
+    { 
+      name: 'Resume', 
+      icon: FileText, 
+      url: 'https://github.com/dhanushba/certificates/blob/main/Dhanush_Resume.pdf',
+      color: 'hover:text-yellow-400'
     },
   ];
 

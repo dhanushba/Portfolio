@@ -17,7 +17,7 @@ const TechnicalArsenal = () => {
     { 
       name: 'Core Concepts', 
       icon: <Brain className="text-red-500" size={24} />,
-      skills: ['Data Structures', 'Algorithms', 'OOP'] 
+      skills: ['Data Structures', 'Algorithms', 'OOPS','Computer Networks','OS','DBMS'] 
     },
   ];
 

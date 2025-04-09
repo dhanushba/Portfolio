@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Award } from 'lucide-react';
 
@@ -7,20 +6,23 @@ const Certifications = () => {
     { 
       name: 'Java from Beginning to Master',
       issuer: 'Udemy',
-      icon: '☕',
-      color: 'bg-red-900/60'
+      icon: 'https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg',
+      color: 'bg-red-900/60',
+      link: 'https://github.com/dhanushba/certificates/blob/main/Udemy.pdf'
     },
     { 
       name: 'Programming Using Java',
       issuer: 'Infosys Springboard',
-      icon: '🚀',
-      color: 'bg-red-800/60'
+      icon: '/is.png',
+      color: 'bg-red-800/60',
+      link: 'https://github.com/dhanushba/certificates/blob/main/Programming_using_java.pdf'
     },
     { 
       name: 'Naukri Campus Young Turks',
       issuer: 'Naukri.com',
-      icon: '🏆',
-      color: 'bg-red-700/60'
+      icon: '/naukri.png',
+      color: 'bg-red-700/60',
+      link: 'https://github.com/dhanushba/certificates/blob/main/Naukri-Infotech.pdf'
     }
   ];
 
@@ -31,17 +33,28 @@ const Certifications = () => {
         <h3 className="text-2xl font-bold gradient-text text-center">Achievements & Certifications</h3>
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {certifications.map((cert, index) => (
-          <div 
+          <a
             key={index}
-            className={`rounded-xl p-6 hover-glow animate-slideUp ${cert.color} transition-all`}
+            href={cert.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`rounded-xl p-6 hover-glow animate-slideUp ${cert.color} transition-all block`}
             style={{ animationDelay: `${0.15 * (index + 1)}s` }}
           >
-            <div className="text-4xl mb-3">{cert.icon}</div>
-            <h4 className="text-lg font-bold text-white mb-2">{cert.name}</h4>
-            <p className="text-white/80 text-sm">Issued by {cert.issuer}</p>
-          </div>
+            <div className="flex items-center space-x-4 mb-3">
+              <img 
+                src={cert.icon} 
+                alt={cert.name} 
+                className="w-10 h-10 object-contain bg-white rounded-md p-1"
+              />
+              <div>
+                <h4 className="text-base font-bold text-white">{cert.name}</h4>
+                <p className="text-white/80 text-sm">Issued by {cert.issuer}</p>
+              </div>
+            </div>
+          </a>
         ))}
       </div>
     </div>

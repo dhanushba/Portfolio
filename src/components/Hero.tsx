@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import AnimatedText from './AnimatedText';
@@ -8,11 +7,11 @@ const Hero = () => {
   const [flipped, setFlipped] = useState(false);
   
   const typingTexts = [
-    "🚀 Information Science Engineer", 
-    "💡 Full Stack Developer", 
-    "☁️ Java & Cloud Enthusiast"
+    "🚀 Aspiring Information Science Engineer", 
+    "💡 Passionate Full Stack Developer", 
+    "☁️ Java & Cloud Computing Enthusiast"
   ];
-
+  
   return (
     <section id="home" className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden">
       {/* Background Animation */}
@@ -34,7 +33,7 @@ const Hero = () => {
             <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/80 to-accent/80 p-1 animate-pulse-soft shadow-xl">
               <div className="w-full h-full rounded-full bg-background/90 p-2 flex items-center justify-center">
                 <img 
-                  src="https://via.placeholder.com/400x400" 
+                  src="/photo.jpeg" 
                   alt="Dhanush B A" 
                   className="w-full h-full object-cover rounded-full"
                 />
@@ -53,7 +52,7 @@ const Hero = () => {
         </div>
         
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 font-display">
-          <span className="gradient-text">Dhanush B A</span><br /> 
+       
           <span className="text-2xl md:text-3xl lg:text-4xl">Information Science Engineering Student</span>
         </h1>
         

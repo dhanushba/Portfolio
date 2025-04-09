@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import SocialIcons from './SocialIcons';
@@ -12,6 +11,7 @@ const Navbar = () => {
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Resume' , href: '/Resume_Dhanush_B_A.pdf'}
   ];
 
   useEffect(() => {
@@ -36,9 +36,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold gradient-text font-display">
-            Dhanush
-          </a>
+          
+          {/* Resume Info (left side) */}
+          <div className="flex flex-col leading-tight">
+            <span className="text-xl font-bold text-primary font-display">Dhanush B A</span>
+            <span className="text-sm text-muted-foreground">Software Engineer | Open to Work</span>
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
